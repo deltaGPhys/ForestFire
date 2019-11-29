@@ -16,3 +16,4 @@ greater than the expectation value for a tree to grow adjacent to the fire.
 An additional rule is used here to encourage a clumping behavior in the trees: the probability of a tree growing 
 in an empty cell is *t*(numNeighbors+1).
 
+![Screenshot](Fire100Gen.png)
