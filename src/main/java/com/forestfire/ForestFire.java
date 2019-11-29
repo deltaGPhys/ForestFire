@@ -33,8 +33,8 @@ public class ForestFire {
     }
 
     public static void main(String[] args) {
-        ForestFire sim = new ForestFire(100,.005,.0001);
-        int[][] endingWorld = sim.simulate(101);
+        ForestFire sim = new ForestFire(200,.005,.0001);
+        int[][] endingWorld = sim.simulate(201);
     }
 
     public int[][] createRandomStart(Integer dimension) {
