@@ -37,9 +37,6 @@ public class ForestFire {
         int[][] endingWorld = sim.simulate(101);
     }
 
-    // Contains the logic for the starting scenario.
-    // Which cells are alive or dead in generation 0.
-    // allocates and returns the starting matrix of size 'dimension'
     public int[][] createRandomStart(Integer dimension) {
         int[][] array = new int[dimension][dimension];
         IntStream.range(0,dimension)
@@ -66,8 +63,6 @@ public class ForestFire {
         return current;
     }
 
-    // copy the values of 'next' matrix to 'current' matrix,
-    // and then zero out the contents of 'next' matrix
     public void copyAndZeroOut(int[][] next, int[][] current) {
         for (int i = 0; i < next[0].length; i++) {
             current[i] = Arrays.copyOf(next[i],next[i].length);
@@ -76,7 +71,7 @@ public class ForestFire {
     }
 
     public int determineCellState(int row, int col, int[][] world) {
-        int dim = world[0].length;
+        int dim = this.dimension; // just to control length of the expressions below :)
         int[] neighbors =
                 new int[] {world[row][(col+1)%dim], world[row][(dim+col-1)%dim],
                 world[(row+1)%dim][col], world[(dim+row-1)%dim][col],
